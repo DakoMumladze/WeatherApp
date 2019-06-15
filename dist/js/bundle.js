@@ -4155,7 +4155,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _Search = __webpack_require__(/*! ./models/Search */ \"./src/js/models/Search.js\");\n\nvar _Search2 = _interopRequireDefault(_Search);\n\nvar _base = __webpack_require__(/*! ./views/base */ \"./src/js/views/base.js\");\n\nvar searchView = _interopRequireWildcard(_base);\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar searchValue = searchView.baseSelectors.searchForm.value;\nsearchView.baseSelectors.searchForm.addEventListener('keydown', function () {\n    console.log(searchValue);\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("\n\nvar _Search = __webpack_require__(/*! ./models/Search */ \"./src/js/models/Search.js\");\n\nvar _Search2 = _interopRequireDefault(_Search);\n\nvar _base = __webpack_require__(/*! ./views/base */ \"./src/js/views/base.js\");\n\nvar searchView = _interopRequireWildcard(_base);\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nsearchView.baseSelectors.searchBtn.addEventListener('click', function () {\n    var searchValue = searchView.baseSelectors.searchForm.value;\n    console.log(searchValue);\n    var results = '\\n    <div class=\"results-container\">\\n        <ul>\\n            <li class=\"result-item\">' + searchValue + '</li>\\n        </ul>\\n     </div>\\n    ';\n    searchView.baseSelectors.searchContainer.insertAdjacentHTML('beforeend', results);\n    console.log(results);\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
@@ -4179,7 +4179,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nvar baseSelectors = exports.baseSelectors = {\n    searchForm: document.querySelector('.search-form'),\n    searchBtn: document.querySelector('.search-btn')\n};\n\n//# sourceURL=webpack:///./src/js/views/base.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nvar baseSelectors = exports.baseSelectors = {\n    searchForm: document.querySelector('.search-form'),\n    searchBtn: document.querySelector('.search-btn'),\n    searchContainer: document.querySelector('.search-container')\n};\n\n//# sourceURL=webpack:///./src/js/views/base.js?");
 
 /***/ }),
 

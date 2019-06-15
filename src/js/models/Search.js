@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default class Search{
+class Search{
     constructor(query){
         this.query = query;
     }
@@ -10,12 +10,16 @@ export default class Search{
         try{
             const res = await axios(`${proxy}api.openweathermap.org/data/2.5/forecast?q=${this.query}&appid=${key}`);
             this.result = `${res.data.list[1].weather[0].main} and ${res.data.list[1].weather[0].description}`;
-            console.log(this.result);
+            // console.log(1232,this.result);
+
+            return this.result;
         }catch(error){
-            alert(error);
+            return this.result = `
+            <span class="color-red">Please enter valid city name</span>
+            `;
         }
     
     }
 }
-const ins = new Search("London,uk");
-console.log(ins.getResults());
+
+export default (query) => new Search(query)

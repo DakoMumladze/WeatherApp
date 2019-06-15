@@ -32,6 +32,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "axios": "^0.18.1",
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "img-loader": "^3.0.1"
   }
 }
