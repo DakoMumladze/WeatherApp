@@ -10,7 +10,6 @@ class Search{
         try{
             const res = await axios(`${proxy}api.openweathermap.org/data/2.5/forecast?q=${this.query}&appid=${key}`);
             this.result = `${res.data.list[1].weather[0].main} and ${res.data.list[1].weather[0].description}`;
-            // console.log(1232,this.result);
 
             return this.result;
         }catch(error){
